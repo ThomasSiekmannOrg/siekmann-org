@@ -9,7 +9,7 @@
   <meta property="og:title" content="Thomas Siekmann — Senior CIO für Sondersituationen">
   <meta property="og:description" content="Übernahme. Post-Merger-Integration. Restrukturierung. Fortführung nach Insolvenz. Wenn die Technologie Ihres Unternehmens gerade zum Risiko geworden ist.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://siekmann.org"
+  <meta property="og:url" content="https://siekmann.org">
   <link rel="canonical" href="https://siekmann.org/">
   <link rel="preconnect" href="https://fonts.bunny.net">
   <link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700&display=swap" rel="stylesheet">
@@ -747,6 +747,45 @@
     .footer-links a:hover { color: rgba(255,255,255,0.55); }
 
 
+
+    /* ═══ PORTRAIT FOTO (Rory v1 — 09.04.2026) ═══ */
+    .profile-portrait {
+      width: 100%;
+      max-height: 290px;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: var(--radius);
+      display: block;
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--lgray);
+    }
+    .cta-photo-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.625rem;
+      margin-bottom: 2.25rem;
+    }
+    .cta-portrait-img {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 15%;
+      border: 2px solid rgba(255,255,255,0.22);
+    }
+    .cta-portrait-name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+    .cta-portrait-sub {
+      font-size: 0.6875rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.38);
+    }
     /* Arrow SVG */
     .arrow-icon { display: inline-block; }</style>
   <script defer data-domain="siekmann.org" src="https://plausible.io/js/script.js"></script>
@@ -820,7 +859,7 @@
         <span class="situation-label">Leitfaden</span>
         <h3>Was zwischen Signing und Day 100 in der IT verloren geht</h3>
         <p>Für Vorstände und PE-Partner, die IT-Risiken vor dem Closing bewerten — nicht danach reparieren. Ca. 24 Seiten, ohne Anmeldung.</p>
-        <a href="#" class="btn-dl">
+        <a href="assets/Whitepaper_BlindeFlecken_ThomasSiekmann.pdf" class="btn-dl" download>
           Als PDF herunterladen
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         </a>
@@ -900,7 +939,7 @@
         <div class="wp-label">Leitfaden</div>
         <h4>Was zwischen Signing und Day 100 in der IT verloren geht</h4>
         <p>Für Vorstände und PE-Partner, die IT-Risiken vor dem Closing bewerten — nicht danach reparieren. Ca. 24 Seiten, ohne Anmeldung.</p>
-        <a href="/assets/Whitepaper_BlindeFlecken_ThomasSiekmann.pdf" style="font-size: 0.875rem; color: var(--white); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); padding: 0.625rem 1.25rem; border-radius: 6px; letter-spacing: 0.02em;">Als PDF herunterladen →</a>
+        <a href="assets/Whitepaper_BlindeFlecken_ThomasSiekmann.pdf" download style="font-size: 0.875rem; color: var(--white); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); padding: 0.625rem 1.25rem; border-radius: 6px; letter-spacing: 0.02em;">Als PDF herunterladen →</a>
       </div>
 
     </div>
@@ -926,12 +965,19 @@
           <span class="branche-tag">Telekommunikation</span>
         </div>
         <div class="download-row">
-          <a href="/assets/thomas-siekmann-profil.pdf" style="font-size: 0.875rem; color: var(--navy); font-weight: 500; text-decoration: underline; text-underline-offset: 3px;">Profil als PDF herunterladen →</a>
+          <a href="assets/thomas-siekmann-profil.pdf" style="font-size: 0.875rem; color: var(--navy); font-weight: 500; text-decoration: underline; text-underline-offset: 3px;">Profil als PDF herunterladen →</a>
           <span class="download-meta">Vermittler-Version · optimiert für Kurzvorstellung</span>
         </div>
       </div>
 
       <div>
+        <!-- Portrait — Sitejet: /assets/thomas-siekmann-portrait.jpg -->
+        <img
+          src="assets/thomas-siekmann-portrait.jpg"
+          alt="Thomas Siekmann — Senior CIO für Sondersituationen"
+          class="profile-portrait"
+          loading="lazy"
+        >
         <div class="kenndaten">
           <div class="kenndaten-row">
             <span class="kd-key">Standort</span>
@@ -962,6 +1008,17 @@
 <!-- ═══ KONTAKT-CTA ═══ -->
 <section class="cta-section" id="kontakt">
   <div class="cta-inner">
+    <!-- Portrait Kontakt — Rory: Gesicht vor CTA erzeugt persönliches Vertrauen -->
+    <div class="cta-photo-wrap">
+      <img
+        src="assets/thomas-siekmann-portrait.jpg"
+        alt="Thomas Siekmann"
+        class="cta-portrait-img"
+        loading="lazy"
+      >
+      <div class="cta-portrait-name">Thomas Siekmann</div>
+      <div class="cta-portrait-sub">Senior CIO · Hamburg</div>
+    </div>
     <div class="section-label">Kontakt</div>
     <h2>Situation kurz schildern —<br><strong>eine E-Mail genügt.</strong></h2>
     <p>Kein Autoresponder. Kein Newsletter. Nur eine Antwort.</p>
